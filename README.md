@@ -10,15 +10,51 @@ BioMedManager es una aplicación basada en Java diseñada para gestionar equipos
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Endpoints](#endpoints)
-- [Configuración](#configuración)
-- [Contribuciones](#contribuciones)
-- [Licencia](#licencia)
+
 
 ## Características
 
 - **Registro de Equipos**: Agregar y gestionar detalles de equipos biomédicos.
 - **Sistema de Notificaciones**: Notificar a los departamentos relevantes sobre nuevos equipos.
-- **Gestión de Mantenimiento**: Implementar estrategias de mantenimiento preventivo y correctivo.
+- **Gestión de Mantenimiento**: Implementar estrategias de mantenimiento preventivo y correctivo#!/bin/bash
+
+# Instalar Git si no está instalado
+   ```sh
+if ! command -v git &> /dev/null
+then
+    echo "Git no está instalado. Instalando..."
+    sudo apt-get install git -y
+fi
+   ```
+
+
+# Instalar Gradle si no está instalado
+   ```sh
+   if ! command -v gradle &> /dev/null
+then
+    echo "Gradle no está instalado. Instalando..."
+    sudo apt-get install gradle -y
+fi
+   ```
+
+# Clonar el repositorio
+
+   ```sh
+git clone https://github.com/zarhell/patrones-disennopoc.git
+cd patrones-disennopoc
+   ```
+
+## Ejecución del Proyecto con el Script Bash
+
+Para facilitar la ejecución del proyecto, ejecutar un script Bash llamado `runBiomed.sh`. del directgorio raiz.
+Este script automatiza la instalación de las dependencias necesarias, la clonación del repositorio y la ejecución del proyecto.
+
+Para usar este script, user el comando `./runBiomed.sh`.
+
+El script verificará si Git y Gradle están instalados en tu sistema. Si no están instalados, el script intentará instalarlos. Luego, el script clonará el repositorio, navegará al directorio del proyecto, y ejecutará los comandos `clean`, `build -x test`, y `bootRun` en modo debug.
+
+# Persistencia
+
 - **Base de Datos Embebida**: Utiliza la base de datos H2 en memoria para facilitar la configuración y portabilidad.
 - **Consola Web**: Consola web de la base de datos H2 para una fácil inspección de datos.
 
@@ -39,7 +75,7 @@ La aplicación utiliza varios patrones de diseño para garantizar un código lim
 - **Strategy**: Implementa diferentes estrategias de mantenimiento.
   - **Uso**: Interfaces `MaintenanceStrategy`, `PreventiveMaintenance` y `CorrectiveMaintenance`.
 - **Observer**: Notifica a los departamentos sobre actualizaciones de equipos.
-  - **Uso**: Interfaces `Observer`, `Subject`, `EquipmentManager` y `MaintenanceDepartment`.
+  - **Uso**: Interfaces `ObserverPoc`, `Subject`, `EquipmentManager` y `MaintenanceDepartment`.
 
 ## Arquitectura Hexagonal
 
