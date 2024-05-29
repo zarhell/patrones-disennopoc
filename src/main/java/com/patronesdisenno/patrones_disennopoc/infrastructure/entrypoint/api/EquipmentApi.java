@@ -18,17 +18,14 @@ import java.util.List;
 /**
  * Contract interface for the Equipment Controller.
  */
-
-@RestController
-@RequestMapping("/api/equipments")
-public interface EquipmentApi {
-
-    @RequestMapping(method = RequestMethod.POST, value = "/api/equipments")
-    ResponseEntity<Equipment> registerEquipment(@RequestBody EquipmentRequest equipmentRequest);
-
-    @RequestMapping(method = RequestMethod.GET, value = "/api/equipments/{id}")
-    ResponseEntity<Equipment> getEquipmentById(@PathVariable String id);
-
-    @RequestMapping(method = RequestMethod.GET, value = "/api/equipments")
-    ResponseEntity<List<Equipment>> getAllEquipments();
-}
+ public interface EquipmentApi {
+ 
+     @RequestMapping(method = RequestMethod.POST)
+     ResponseEntity<Equipment> registerEquipment(@RequestBody EquipmentRequest equipmentRequest);
+ 
+     @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+     ResponseEntity<Equipment> getEquipmentById(@PathVariable String id);
+ 
+     @RequestMapping(method = RequestMethod.GET)
+     ResponseEntity<List<Equipment>> getAllEquipments();
+ }

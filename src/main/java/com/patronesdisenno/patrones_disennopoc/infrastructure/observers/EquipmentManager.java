@@ -6,9 +6,12 @@ import com.patronesdisenno.patrones_disennopoc.domain.models.Equipment;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Subject class for managing observers and notifying them about equipment changes.
  */
+@Service
 public class EquipmentManager implements Subject {
     private List<ObserverPoc> observers = new ArrayList<>();
     private Equipment equipment;
