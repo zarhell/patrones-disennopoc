@@ -1,19 +1,14 @@
-package com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint;
+package com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.controller;
 
 import com.patronesdisenno.patrones_disennopoc.application.ports.in.EquipmentService;
 import com.patronesdisenno.patrones_disennopoc.domain.builders.EquipmentBuilder;
 import com.patronesdisenno.patrones_disennopoc.domain.models.Equipment;
 import com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.api.EquipmentApi;
+import com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.payload.EquipmentRequest;
 import com.patronesdisenno.patrones_disennopoc.infrastructure.observers.EquipmentManager;
 import com.patronesdisenno.patrones_disennopoc.infrastructure.observers.MaintenanceDepartment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.List;

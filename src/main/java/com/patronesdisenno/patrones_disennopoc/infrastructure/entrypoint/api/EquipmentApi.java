@@ -5,7 +5,7 @@ package com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.api;
  */
 
 import com.patronesdisenno.patrones_disennopoc.domain.models.Equipment;
-import com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.EquipmentRequest;
+import com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.payload.EquipmentRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

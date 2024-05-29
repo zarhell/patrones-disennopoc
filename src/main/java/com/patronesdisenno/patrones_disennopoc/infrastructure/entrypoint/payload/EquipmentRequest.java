@@ -1,4 +1,4 @@
-package com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint;
+package com.patronesdisenno.patrones_disennopoc.infrastructure.entrypoint.payload;
 /**
  * DTO for equipment request.
  */
